@@ -1,4 +1,4 @@
-# Jenkins
+# Jenkins Installations on RedHat Linux
 #!/bin/bash
 
 # Installing Jenkins on RHEL 7/8, CentOS 7/8 or Amazon Linux OS
@@ -24,3 +24,7 @@ sudo systemctl start jenkins
 sudo systemctl status jenkins
 sudo su - ec2-user
 echo "echo of jenkins installation"
+
+To generate password for the jenkins GUI:
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+Then copy and paste on password....
