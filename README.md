@@ -28,3 +28,8 @@ echo "echo of jenkins installation"
 To generate password for the jenkins GUI:
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 Then copy and paste on password....
+
+cat /etc/passwd
+you will find that the jenkins user has a 'false' as an interpreter instead of the shell being /bin/bash, it is /bin/false. To change this, vi or vim or nano into /etc/passwd and change the line element of 'false' to 'bash' to have the appropriate interpreter for jenkins user.
+
+Jenkins is run as a jenkins user and not as root user
